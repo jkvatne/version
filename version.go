@@ -15,7 +15,7 @@ func main() {
     flag.BoolVar(&help, "help",false, "Print some help info")
 	flag.Parse()
 	fmt.Printf("Generating a gitversion.go file for package %s (-help for more info)\n",packagename)
-	fmt.Printf("(c)Jan Kåre Vatne 2024\n")
+	fmt.Printf("(c)Jan Kåre Vatne 2024 (jkvatne@online.no), Version %s\n", Version)
     if help {
         fmt.Printf("\n")
         fmt.Printf("This program assumes that git is installed and on the path\n")
@@ -34,6 +34,7 @@ func main() {
         fmt.Printf("In the Goland IDE, to run it automatically before building the exe file:\n")
         fmt.Printf("  Ctrl-Alt-S, Tools, External Tools, Click '+' \n")
         fmt.Printf("  Set name and description. Set Program to 'version.exe', and click OK\n")
+        fmt.Printf("  Set working directory to '$ProjectFileDir$' \n")
         fmt.Printf("  Edit the run configuration(s)\n")
         fmt.Printf("  At the bottom, in the 'Before launch' list, click '+'\n")
         fmt.Printf("  Select 'Run external tool' and select the tool you added (version).")

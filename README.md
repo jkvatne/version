@@ -1,7 +1,7 @@
-# Extract verision info from git.
+# Extract version info from git repo.
 
 This small program will generate a file named gitversion.go
-when it is run in any directory with git support.
+when it is run in a directory with git support.
 
 The file gitversion.go will have "package main" at the top, so it will be 
 part of the main package automaticaly.
@@ -23,13 +23,19 @@ const Version="V0.1-107-gce0a8d27-dirty"
 ```
 
 To use this program, run 
-```
-go install
-``` 
+
+``` go install github.com/jkvatne/version@latest``` 
 
 And ensure that the exe file created is available in the path.
 
-Add the following line to the pre-build script, or for GoLand, 
+
+In the Goland IDE, to run it automatically before building the exe file:
+- Edit the settings with Ctrl-Alt-S, Tools, External Tools, then click '+'
+- Set name and description. Set Program to 'version.exe', and click OK
+- Set working directory to '$ProjectFileDir$'
+- Edit the run configuration(s)
+- At the bottom, in the 'Before launch' list, click '+'
+- Select 'Run external tool' and select the tool you added (version).")To run the program in Goland automaticaly for each build,
 add an external tool named ``` version.exe``` in the run configuration,
-and set working directory to ``` $ProjectFileDir$``` 
- 
+
+(C)Jan Kåre Vatne 2024 (jkvatne@online.no)

@@ -27,7 +27,9 @@ To use this program, run
 ``` go install github.com/jkvatne/version@latest``` 
 
 And ensure that the exe file created is available in the path.
-
+It is recommended to exclude the file "gitversion.go" from the repo,
+since it is regenerated each time you build the exe file.
+This will immediately make the repo dirty again, unless the file is excluded.
 
 In the Goland IDE, to run it automatically before building the exe file:
 - Edit the settings with Ctrl-Alt-S, Tools, External Tools, then click '+'

@@ -4,5 +4,4 @@ notes/
 .idea/*
 *.xml
 *.json
-gitversion.go
 

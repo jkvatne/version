@@ -45,7 +45,7 @@ func main() {
 	cmd := exec.Command("git", "describe", "--abbrev=8", "--dirty", "--always", "--tags")
 	out, err := cmd.CombinedOutput()
 	if err != nil {
-		log.Fatal(err)
+		log.Fatal("The git command failed: %s",err)
 	}
 	fmt.Printf("Generated \"gitversion.go\" for git revision %s", out)
 	outfile, err := os.Create("gitversion.go")

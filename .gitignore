@@ -1,0 +1,8 @@
+.private/
+notes/
+**/*.exe
+.idea/*
+*.xml
+*.json
+gitversion.go
+
